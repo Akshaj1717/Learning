@@ -1,4 +1,4 @@
-###Learning Notes
+## Learning Notes
 
 This repository is a personal collection of notes, examples, and small pieces of code as I learn and review different topics in computer science and software development.
 
@@ -10,7 +10,7 @@ Reinforce concepts by writing them down
 
 Have a place to revisit ideas later
 
-###Topics (Work in Progress)
+## Topics (Work in Progress)
 
 Data Structures & Algorithms
 
