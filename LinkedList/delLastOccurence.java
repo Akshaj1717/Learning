@@ -62,9 +62,6 @@ public class delLastOccurence
 
     public static void main(String[] args) 
     {
-      
-        // Create a hard-coded linked list:
-        // 1 -> 2 -> 2 -> 4 -> 2
         Node head = new Node(1);
         head.next = new Node(2);
         head.next.next = new Node(2);
