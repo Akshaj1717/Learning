@@ -47,6 +47,32 @@ public class Main
 
     private static void merge(int[] leftArray, int[] rightArray, int[] array)
     {
+        int leftSize = array.length / 2;
+        int rightSize = array.length - leftSize;
+        int i = 0; //orignal array
+        int l = 0; //left array 
+        int r = 0; //right array
 
+        // check merge condition
+        while(l < leftSize && r < rightSize)
+        {
+            if (leftArray[l] < rightArray[r])
+            {
+                array[i] = leftArray[l];
+                i++;
+                l++;
+            }
+            else
+            {
+                array[i] = rightArray[r];
+                i++;
+                r++;
+            }
+        }
+
+        while(l < leftSize)
+        {
+            
+        }
     }
 }
