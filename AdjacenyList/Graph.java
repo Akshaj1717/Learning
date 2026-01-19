@@ -1,6 +1,7 @@
 package AdjacenyList;
 
 import java.util.ArrayList;
+import java.util.*;
 
 public class Graph 
 {
@@ -13,7 +14,8 @@ public class Graph
 
     public void addNode(Node node)
     {
-
+        LinkedList<Node> currentList = new LinkedList<>();
+        currentList.add(node);
     }
 
     public void addEdge(int src, int dst)
@@ -28,6 +30,6 @@ public class Graph
 
     public void print()
     {
-        
+
     }
 }
