@@ -1,6 +1,6 @@
 package AdjacenyList;
 
-import java.util.ArrayList;
+import java.util.*;
 
 
 public class Graph 
@@ -21,16 +21,36 @@ public class Graph
 
     public void addEdge(int src, int dst)
     {
-        
+        LinkedList<Node> currentList = alist.get(src);
+        Node dstNode = alist.get(dst).get(0);
+        currentList.add(dstNode);
     }
 
-    public void checkEdge(int src, int dst)
+    public boolean checkEdge(int src, int dst)
     {
+        LinkedList<Node> currentList = alist.get(src);
+        Node dstNode = alist.get(dst).get(0);
+
+        for (Node node : currentList)
+        {
+            if(node == dstNode)
+            {
+                return true;
+            }
+        }
         
+        return false;
     }
 
     public void print()
     {
-
+        for (LinkedList<Node> currentList : alist)
+        {
+            for(Node node : currentList)
+            {
+                System.out.println(node.data + "->");
+            }
+            System.out.println();
+        }
     }
 }
