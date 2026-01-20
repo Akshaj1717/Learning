@@ -20,5 +20,7 @@ public class Main
         graph.addEdge(4, 2);
 
         graph.print();
+
+        graph.breadthFirstSearch(4);
     }
 }
