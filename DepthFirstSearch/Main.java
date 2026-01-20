@@ -21,6 +21,6 @@ public class Main
 
         graph.print();
 
-        graph.depthFirstSearch(0);
+        graph.depthFirstSearch(4);
     }
 }
