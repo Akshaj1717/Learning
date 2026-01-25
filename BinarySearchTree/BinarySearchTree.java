@@ -31,12 +31,17 @@ public class BinarySearchTree
 
     public void display()
     {
-
+        displayHelper(root);
     }
 
     private void displayHelper(Node root)
     {
-
+        if (root != null)
+        {
+            displayHelper(root.left);
+            System.out.println(root.data);
+            displayHelper(root.right);
+        }
     }
 
     public boolean search(int data)
