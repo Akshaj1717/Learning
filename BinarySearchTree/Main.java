@@ -15,10 +15,7 @@ public class Main
         tree.insert(new Node(4));
         tree.insert(new Node(8));
 
-        tree.display();
-
-        System.out.println(tree.search(10));
-
         tree.remove(0);
+        tree.display();
     }
 }

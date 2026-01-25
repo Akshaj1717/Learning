@@ -108,7 +108,7 @@ public class BinarySearchTree
             else
             {
                root.data = predecessor(root);
-            root.left = removeHelper(root.left, root.data)
+            root.left = removeHelper(root.left, root.data);
             }
         }
         return root;
@@ -116,11 +116,21 @@ public class BinarySearchTree
 
     private int successor(Node root)
     {
-        return 0;
+        root = root.right;
+        while(root.left != null)
+        {
+            root = root.left;
+        }
+        return root.data;
     }
 
     private int predecessor(Node root)
     {
-        return 0;
+        root = root.left;
+        while(root.right != null)
+        {
+            root = root.right;
+        }
+        return root.data;
     }
 }
