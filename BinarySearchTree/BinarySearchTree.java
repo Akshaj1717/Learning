@@ -46,22 +46,72 @@ public class BinarySearchTree
 
     public boolean search(int data)
     {
-        return false;
+        return searchHelper(root, data);
     }
 
-    private boolean searcHelper(Node root, int data)
+    private boolean searchHelper(Node root, int data)
     {
-        return false;
+        if (root == null)
+        {
+            return false;
+        }
+        else if (root.data == data)
+        {
+            return true;
+        }
+        else if (root.data > data)
+        {
+            return searchHelper(root.left, data);
+        }
+        else
+        {
+            return searchHelper(root.right, data);
+        }
     }
-
     public void remove(int data)
     {
-
+        if (search(data))
+        {
+            removeHelper(root, data);
+        }
+        else
+        {
+            System.out.println(data + " could not be found");
+        }
     }
 
     public Node removeHelper(Node root, int data)
     {
-        return null;
+        if (root == null)
+        {
+            return root;
+        }
+        else if (data < root.data)
+        {
+            root.left = removeHelper(root.left, data);
+        }
+        else if (data > root.data)
+        {
+            root.right = removeHelper(root.right, data);
+        }
+        else
+        {
+            if (root.left == null && root.right == null)
+            {
+                root = null;
+            }
+            else if (root.right != null)
+            {
+                root.data = successor(root);
+                root.right = removeHelper(root.right, root.data);
+            }
+            else
+            {
+               root.data = predecessor(root);
+            root.left = removeHelper(root.left, root.data)
+            }
+        }
+        return root;
     }
 
     private int successor(Node root)
